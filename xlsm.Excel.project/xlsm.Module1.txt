@@ -1,0 +1,39 @@
+Private Sub cmdReset_Click()
+Dim msgValue As VbMsgBoxResult
+    
+    msgValue = MsgBox("Do you want to reset the form?", vbYesNo + vbInformation, "Confirmation")
+    
+    If msgValue = vbNo Then Exit Sub
+  
+    Call Reset
+End Sub
+
+Private Sub cmdSave_Click()
+
+    Dim msgValue As VbMsgBoxResult
+    
+    msgValue = MsgBox("Do you want to save the data?", vbYesNo + vbInformation, "Confirmation")
+    
+    If msgValue = vbNo Then Exit Sub
+    
+    Call submit
+    Call Reset
+    
+    
+
+
+
+
+End Sub
+
+
+Private Sub txtID_Change()
+
+End Sub
+
+Private Sub UserForm_Initialize()
+
+    Call Reset
+    
+
+End Sub
